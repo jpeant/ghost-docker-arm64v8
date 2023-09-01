@@ -32,10 +32,10 @@ networks:
   - web
 
 db: build: context: ../.. dockerfile: app/Docker/Dockerfile.release image: arm64v8/mariadb:latest restart: always environment: 
-# always have a strong password 
 
+# always have a strong passwords
 MYSQL_ROOT_USER: root_name_change_me
 MYSQL_ROOT_PASSWORD: secure_password_change_me
-volumes: - mysql-data:/var/lib/mysql
 
+volumes: - mysql-data:/var/lib/mysql
 volumes: mysql-data:
