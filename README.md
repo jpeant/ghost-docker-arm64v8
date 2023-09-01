@@ -1,6 +1,6 @@
 # ghost-docker-arm64v8
 
-!! Needs an update, do not use !!
+!! Needs an update, use on your own risk !!
 
 Docker-compose file for Ghost CMS
 
