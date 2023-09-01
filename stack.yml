@@ -9,10 +9,10 @@ volumes:
   - ./content:/var/lib/ghost/content
 environment:
   # see https://ghost.org/docs/config/#configuration-options
-  database__client: mysql
+  database__client: mysql 
   database__connection__host: db
-  database__connection__user: root_name
-  database__connection__password: secure_pasword
+  database__connection__user: root_name # change me
+  database__connection__password: secure_pasword # change me
   database__connection__database: ghost
   # this url value is just an example, and is likely wrong for your environment!
   url: https://yourdomain.com
