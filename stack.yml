@@ -18,8 +18,9 @@ environment:
   
 # this url value is just an example, and is likely wrong for your environment!
   url: https://yourdomain.com
-  # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
-  #NODE_ENV: development
+
+# this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
+  # NODE_ENV: development
 
 labels:
   - traefik.http.routers.blog.rule=Host(`blog.your_domain`)
@@ -31,7 +32,7 @@ networks:
   - internal
   - web
 
-ghost_db: build: context: ../.. dockerfile: app/Docker/Dockerfile.release image: arm64v8/mariadb:latest restart: always environment: 
+ghost_db: build: context: ../.. dockerfile: app/Docker/Dockerfile.release image: arm64v8/mariadb:latest restart:always environment: 
 
 # always have a strong passwords
 MYSQL_ROOT_USER: root_name_change_me
